@@ -18,6 +18,9 @@
                     <a href="index.php">HOME</a>
                 </li>
                 <li>
+                    <a href="colors.php">COLORS</a>
+                </li>
+                <li>
                     <a href="posterinfo.php">INFO</a>
                 </li>
                 <li>
@@ -43,20 +46,70 @@
     <div id="button-wrapper">
 
          <button type="button">filter by title</button>
-
+        
          <button type="button">filter by director</button>
-            
+                    
          <button type="button">filter by genre</button>
-         
     </div>
 
 
     <div class="section-three">
 
-   
-        <?php include "poster.php"; ?>
-           
-    </div>
+    <div class="poster">
+
+<?php
+
+    //poster.PHP  
+
+    include "db_connection.php";   
+
+    $movies_index = $_GET['movie_id'];
+    
+    $sql_querie = "SELECT mov_id, mov_poster FROM movies WHERE mov_id = '$movies_index'";
+    
+    $db_result = $conn->query($sql_querie);  
+
+    foreach ($db_result as $row)
+    {            
+        
+        $movie_poster = $row['mov_poster'];
+        $movie_id = $row['mov_id']; 
+        //echo $movie_id;
+
+        echo '<div class="poster">' .
+             '<a href="posterinfo.php?movie_id=' . $movie_id . '">'  .
+                '<img src="img/' . $movie_poster . '" alt="' . $row['mov_id'] . '" style="width:100%">' .   
+             '</a>' .       
+             '</div>';
+  
+    }       
+
+    $conn = null;
+  
+?>
+
+</div>
+
+</div>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="posterinfo">
+    
+        </div>
+        <p class="postertext">
+               
+        </p>
+        </div>

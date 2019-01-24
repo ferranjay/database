@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,9 +16,6 @@
             <ul class="menu">
                 <li>
                     <a href="index.php">HOME</a>
-                </li>
-                <li>
-                    <a href="colors.php">COLORS</a>
                 </li>
                 <li>
                     <a href="posterinfo.php">INFO</a>
@@ -39,27 +36,20 @@
     
 
     <div class="section-two">
-       <p>CONTACT</p>
+       <p>INFO</p>
 
     </div>
 
     <div class="section-three">
 
 
-        <div class="postersize">
-            <img src="img/contact.png">
+        <div class="posterinfo">
+            
+        </div>
+        <p class="postertext">
+             
+        </p>
         </div>
        
     </div>
 </form>
-
-
-
-
-
-
-
-    
-</body>
-</html>
-
