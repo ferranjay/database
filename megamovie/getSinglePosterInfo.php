@@ -77,14 +77,14 @@
 
         //echo $movie_id;
 
-        echo '<div class="poster">' .
+        echo 
              '<a href="getSinglePosterInfo.php?movie_id=' . $movie_id . '">'  .
                 '<img src="img/' . $movie_poster . '" alt="' . $row['mov_id'] . '" style="width:100%">' .   
-             '</a>' .  
+             '</a>' . '</div>' .
              '<div class="postertext">' .
-             '<h1>' . $row['mov_title']  . ' ' . $row['mov_lang'] . '' . $row['mov_year'] . '</h1>' .
+             '<h1>' . $row['mov_title']  . ' <br> ' . $row['mov_lang'] . '<br>' . $row['mov_year'] . '</h1>' .
              '</div>';    
-             '</div>';
+             
   
     }       
 
@@ -92,7 +92,6 @@
   
 ?>
 
-</div>
 
 </div>
 

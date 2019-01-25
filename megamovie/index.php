@@ -18,7 +18,7 @@
                     <a href="index.php">HOME</a>
                 </li>
                 <li>
-                    <a href="info.php">INFO</a>
+                    <a href="info.php?movie_id= 1">INFO</a>
                 </li>
                 <li>
                     <a href="contact.php">CONTACT</a>
