@@ -18,7 +18,7 @@
                     <a href="index.php">HOME</a>
                 </li>
                 <li>
-                    <a href="getSinglePosterInfo.php">INFO</a>
+                    <a href="info.php">INFO</a>
                 </li>
                 <li>
                     <a href="contact.php">CONTACT</a>
@@ -52,7 +52,7 @@
 
     <div class="section-three">
 
-    <div class="poster">
+
 
 <?php
 
@@ -60,9 +60,9 @@
 
     include "db_connection.php";   
 
-    $movies_index = $_GET['movie_id'];
+    //  $movies_index = $_GET['movie_id'];
     
-    $sql_querie = "SELECT mov_id, mov_poster, mov_title, mov_lang, mov_year FROM movies WHERE mov_id = '$movies_index'";
+    $sql_querie = "SELECT mov_id, mov_poster FROM movies ORDER BY mov_title ASC LIMIT 20;";
     
     $db_result = $conn->query($sql_querie);  
 
@@ -71,19 +71,12 @@
         
         $movie_poster = $row['mov_poster'];
         $movie_id = $row['mov_id']; 
-        $movie_title = $row ['mov_title'];
-        $movie_lang = $row ['mov_lang'];
-        $movie_year = $row ['mov_year'];
-
         //echo $movie_id;
 
         echo '<div class="poster">' .
              '<a href="getSinglePosterInfo.php?movie_id=' . $movie_id . '">'  .
                 '<img src="img/' . $movie_poster . '" alt="' . $row['mov_id'] . '" style="width:100%">' .   
-             '</a>' .  
-             '<div class="postertext">' .
-             '<h1>' . $row['mov_title']  . ' ' . $row['mov_lang'] . '' . $row['mov_year'] . '</h1>' .
-             '</div>';    
+             '</a>' .       
              '</div>';
   
     }       
@@ -92,11 +85,8 @@
   
 ?>
 
+
+
 </div>
-
-</div>
-
-
-
 
 

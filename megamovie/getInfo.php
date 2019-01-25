@@ -1,6 +1,6 @@
 <?php
 
-    //poster.PHP
+    //getInfo.PHP
 
     include "db_connection.php";   
     
@@ -16,10 +16,14 @@
         $m_id = $row['mov_id']; 
         //echo $movie_id;
 
-        echo '<div class="poster">' .
+        echo '<div class="postercolor">' .
+             '<div class="postercolor2">' .
              '<a href="getSinglePosterInfo.php?movie_id=' . $m_id . '">'  .
-                '<img src="img/' . $movie_poster . '" alt="' . $row['mov_id'] . '" style="width:100%">' . 
-             '</a>' .       
+                '<img src="img/' . $movie_poster . '" alt="' . $row['mov_id'] . '" style="width:100%">' .   
+             '</a>' . 
+             '</div>';      
+             '</div>';
+             '<div class="postercolor3">' .
              '</div>';
   
     }       

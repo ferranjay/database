@@ -1,11 +1,11 @@
 <?php
 
-    //poster.PHP
+    //title.PHP
 
     include "db_connection.php";   
     
     
-    $sql_querie = "SELECT mov_id, mov_poster FROM movies limit 20";
+    $sql_querie = "SELECT mov_id, mov_poster FROM movies limit 20 ORDER BY mov_title";
     
     $db_result = $conn->query($sql_querie);  
 
@@ -17,8 +17,8 @@
         //echo $movie_id;
 
         echo '<div class="poster">' .
-             '<a href="getSinglePosterInfo.php?movie_id=' . $m_id . '">'  .
-                '<img src="img/' . $movie_poster . '" alt="' . $row['mov_id'] . '" style="width:100%">' . 
+             '<a href="getPosterbyTitle.php?movie_id=' . $m_id . '">'  .
+                '<img src="img/' . $movie_poster . '" alt="' . $row['mov_id'] . '" style="width:100%">' .   
              '</a>' .       
              '</div>';
   

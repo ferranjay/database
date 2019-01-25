@@ -18,7 +18,7 @@
                     <a href="index.php">HOME</a>
                 </li>
                 <li>
-                    <a href="posterinfo.php">INFO</a>
+                    <a href="info.php">INFO</a>
                 </li>
                 <li>
                     <a href="contact.php">CONTACT</a>
@@ -36,24 +36,25 @@
     
 
         <div class="section-two">
-            <p>Where movies & art unite</p>
+            <p>WHERE MOVIES & ART UNITE</p>
 
         </div>
 
     <div id="button-wrapper">
 
-         <button type="button">filter by title</button>
+    
+    
+         <button class="one" type="button" onclick="window.location.href='getPosterbyTitle.php'">order by title</button>
 
-         <button type="button">filter by director</button>
+         <button class="two" type="button" onclick="window.location.href='getPosterbyDir.php'">order by director</button>
             
-         <button type="button">filter by genre</button>
+         <button class="three" type="button" onclick="window.location.href='getPosterbyGen.php'">order by genre</button>
          
     </div>
 
 
     <div class="section-three">
 
-   
         <?php include "poster.php"; ?>
            
     </div>

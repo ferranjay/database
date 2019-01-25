@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -18,10 +18,7 @@
                     <a href="index.php">HOME</a>
                 </li>
                 <li>
-                    <a href="colors.php">COLORS</a>
-                </li>
-                <li>
-                    <a href="posterinfo.php">INFO</a>
+                    <a href="info.php">INFO</a>
                 </li>
                 <li>
                     <a href="contact.php">CONTACT</a>
@@ -46,8 +43,13 @@
     <div class="section-three">
 
 
-        <div class="postersize">
+        <div class="postercontact">
             <img src="img/contact.png">
+        </div>
+
+        <div class="contactinfo"> Mega Movies <br><br> The website where movies and art come together. <br> You will find basic information about the top 20 movies of the past decade. 
+        <br> In addition, used color palettes from the movies can be discovered. <br><br><br><br>8605 Santa Monica Blvd
+        <br>West Hollywood, <br> CA 90069-4109 US. <br><br> email: info@megamovie.movie
         </div>
        
     </div>
